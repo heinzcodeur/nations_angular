@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## API Restcountries
 
-        axios.get("https://restcountries.com/v3.1/all").then((res) => setData(res.data))
+        https://restcountries.com/v3.1/all"
