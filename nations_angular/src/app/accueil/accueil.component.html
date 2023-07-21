@@ -1,0 +1,18 @@
+<div class="countries">
+
+
+    <ul class="radio-container">
+        <input type="range" min="1" max="250" value={{rangeValue}} />
+        <li *ngFor="let continent of radios">
+            <input type="radio" [id]="continent" name="continentRadio" />
+            <label [for]="continent">{{ continent }}</label>
+        </li>
+    </ul>
+
+    <p>nombre de nations: {{ nations.length }}</p><br>
+    <ul style="list-style-type: none;">
+        <app-country-card *ngFor="let nation of nations" [nation]="nation" (click)="goToNation(nation)"></app-country-card>
+        <!-- <span *ngFor="let nation of nations">{{ nation.subregion }}-</span> -->
+    </ul>
+
+</div>

@@ -1,0 +1,35 @@
+<div *ngIf="nation" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ nation.name.common }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="nation.flags.svg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ nation.name.common }}</strong></td>
+              </tr>
+              <tr>
+                <td>Capitale</td>
+                <td><strong>{{ nation.capital }}</strong></td>
+              </tr>
+              <tr>
+                <td>population</td>
+                <td><strong>{{ nation.population.toLocaleString() }}</strong></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <!-- <a (click)="goToPokemonList()">Retour</a> -->
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!nation' class="center">Aucune nation à afficher !</h4>
